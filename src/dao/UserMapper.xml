@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<!--相当于dao接口的实现-->
+<mapper namespace="dao.UserDao">
+	<select id="getUser" resultType="domain.User">
+		select * from user where 1=1
+		<if test="id!=-1">
+			and id=#{id}
+		</if>
+		<if test="name!=null and name!=''">
+			and name=#{name}
+		</if>
+	</select>
+	<insert id="addUser">
+		insert into user values(#{id},#{name},#{pwd},#{email})
+	</insert>
+	<delete id="deleteUser">
+		delete from user where id=#{id}
+	</delete>
+	<!--使用动态sql使增强更新方法通用性，为null表示不更新此列-->
+	<update id="updateUser">
+		update user set 
+		<if test="name!=null and name!=''">
+			name=#{name}
+		</if>
+		<if test="pwd!=null and pwd!=''">
+			pwd=#{pwd}
+		</if>
+		<if test="email!=null and email!=''">
+			email=#{email}
+		</if>
+		where id=#{id}
+	</update>
+</mapper>

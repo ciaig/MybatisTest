@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="ant-1.9.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/ant-1.9.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/ant-launcher-1.9.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/asm-5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/cglib-3.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/javassist-3.22.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/log4j-api-2.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/log4j-core-2.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/mybatis-3.4.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/mysql-connector-java-5.1.46.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/ognl-3.1.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

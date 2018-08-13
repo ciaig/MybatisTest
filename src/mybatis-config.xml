@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "http://mybatis.org/dtd/mybatis-3-config.dtd" "mybatis-3-config.dtd" >
+<configuration>
+	<settings>
+		<setting name="logImpl" value="LOG4J2"/>
+	</settings>
+	<environments default="developement">
+	<!--配置数据库环境-->
+		<environment id="developement">
+			<transactionManager type="JDBC"/>
+			<!--使用自定义连接池-->
+			<dataSource type="utils.DBCPPoolFactory">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql:///test"/>
+				<property name="username" value="root"/>
+				<property name="password" value="root"/>
+				<property name="initSize" value="10"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<!--添加映射文件-->
+	<mappers>
+		<mapper resource="dao/UserMapper.xml"/>
+	</mappers>
+</configuration>
